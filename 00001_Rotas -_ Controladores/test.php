@@ -13,7 +13,7 @@ public function testRutas(): void {
 		  }
 		}
 	  
-		$this->assertTrue($ruta !== NULL, "Falta a rota a /generos");
+		$this->assertTrue($ruta !== NULL, "Falta a rota  /generos");
 		
 		$this->assertTrue(is_string($ruta["action"]), "O segundo parâmetro da rota deve ser uma string");
 		
@@ -58,7 +58,7 @@ public function testRutas(): void {
 		  }
 		}
 		
-		$this->assertTrue($ruta !== NULL, "Falta a rota /filmes/ID");
+		$this->assertTrue($ruta !== NULL, "Falta a rota /filmes/ID . Observe que o parâmetro da rota deve ir entre chaves (ie: /filmes/{id})");
 		
 		$this->assertTrue(is_string($ruta["action"]), "O segundo parâmetro da rota /filmes/ID deveria ser uma string");
 		
