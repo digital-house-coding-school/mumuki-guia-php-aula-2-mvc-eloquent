@@ -1,0 +1,3 @@
+class GenerosController extends Controller {
+
+}
