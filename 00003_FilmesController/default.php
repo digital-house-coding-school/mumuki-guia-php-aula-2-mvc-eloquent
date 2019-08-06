@@ -1,3 +1,3 @@
-class PeliculasController extends Controller {
+class FilmesController extends Controller {
 
 }
