@@ -11,7 +11,7 @@ public function testFilme(): void {
 			
 			$this->assertTrue($pelicula->getGuarded() === [], "O atributo guarded deve ser um array vazio para que todas as colunas sejam escrevíveis.");
 			
-			$this->assertTrue(method_exists("Pelicula", "recomendado"), "Falta o método 'recomendado' na classe Filme");
+			$this->assertTrue(method_exists("Filme", "recomendado"), "Falta o método 'recomendado' na classe Filme");
 			
 			$pelicula->rating = 9;
 			
