@@ -1,0 +1,3 @@
+class Genero extends Model {
+
+}
