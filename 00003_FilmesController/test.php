@@ -36,5 +36,5 @@ public function testPeliculaListado(): void {
 		
 		$this->assertTrue($pasePorView, "Parece que você não utilizou a função <em>view</em>");
 		
-		$this->assertTrue($resul === "detalhesFilme3", "El método detalle debería redirigir a la vista detallePelicula y tiene que tener compartido el id que llega como parámetro. No olvides además de que deberías haber utilizado el return");
+		$this->assertTrue($resul === "detalhesFilme3", "O método detalhes deve redirecionar para a view <em>detalhesFilme</em> e deve passar o id como parâmetro para essa view. Não esqueça o return para retornar a view.");
 	}
