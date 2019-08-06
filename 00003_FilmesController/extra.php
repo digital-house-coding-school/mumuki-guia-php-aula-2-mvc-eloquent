@@ -6,6 +6,10 @@ function view($route, $vac = []) {
   $pasePorView = true;
   
   if ($route == "detalhesFilme") {
+    if(!is_array($vac)){
+      throw new Exception('Precisa receber um array...');
+    }
+  
     if (count($vac) !== 1) {
       throw new Exception('Nada bom...');
     }
