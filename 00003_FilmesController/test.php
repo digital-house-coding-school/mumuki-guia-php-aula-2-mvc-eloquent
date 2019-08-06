@@ -1,4 +1,4 @@
-public function testPeliculaListado(): void {
+public function testListarFilmes(): void {
 		global $pasePorView;
 		
 		$pasePorView = false;
