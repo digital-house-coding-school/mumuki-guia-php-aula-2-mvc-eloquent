@@ -14,7 +14,7 @@ public function testListarFilmes(): void {
 		$this->assertTrue($resul === "listarFilmes", "O método listar deve redirecionar para a view listarFilmes. Esqueceu um return? Se não, verifique o nome da view retornada");
 	}
 
-	public function testDetalhesFilme(): void {
+	public function testDetalhesFilmes(): void {
 		global $pasePorView;
 		
 		$pasePorView = false;
