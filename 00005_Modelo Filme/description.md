@@ -1,4 +1,4 @@
-Para este exercício faremos em movie.php, o arquivo **model** que é consistente com a tabela **filmes** no banco de dados.
+Para este exercício faremos em filme.php o arquivo **model** que é consistente com a tabela **filmes** no banco de dados.
 
 Seu trabalho neste caso é o seguinte:
 
