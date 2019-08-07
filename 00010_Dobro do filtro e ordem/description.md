@@ -6,6 +6,6 @@ Para este exercício, pedimos que você complete a função "filmesAceitaveis" c
 
 > 2. Você também deve filtrar filmes com uma classificação menor ou igual a 8
 
-> 3. Você deve classificar filmes pela coluna **titulo** de forma crescente
+> 3. Você deve classificar filmes pela coluna **title** de forma crescente
 
 > 4. Você deve passar esta lista de filmes filtrados para a view que está no arquivo `filmesAceitaveis.blade.php`
