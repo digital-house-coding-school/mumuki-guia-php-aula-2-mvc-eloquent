@@ -140,14 +140,14 @@ class Filme extends Model {
   }
   
   public static function where($col, $operador, $value = null) {
-    $consulta = new Consulta("movies");
+    $consulta = new Consulta("filmes");
     $consulta->where($col, $operador, $value);
     
     return $consulta;
   }
   
   public static function orderBy($col, $order = "ASC") {
-    $consulta = new Consulta("movies");
+    $consulta = new Consulta("filmes");
     $consulta->orderBy($col, $order);
     
     return $consulta;
