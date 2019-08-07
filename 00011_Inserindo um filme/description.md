@@ -1,6 +1,6 @@
 **Esclarecimento: Neste exercício não é necessário que você adicione a linha `use App\Filme;`. Você pode assumir que o arquivo já está incluído**
 
-Chegou a hora de inserir um filme!
+Chegou a hora de inserir um filme! 
 
 Para isso, você deve criar uma função chamada `store` que receberá o seguinte formulário por POST para adicionar um filme:
 
