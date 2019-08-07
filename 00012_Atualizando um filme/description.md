@@ -1,4 +1,4 @@
-**Esclarecimento: Neste exercício não é necessário que você adicione a linha `use App\Movie;`. Você pode assumir que o arquivo já está incluído **
+**Esclarecimento: Neste exercício não é necessário que você adicione a linha `use App\Movie;`. Você pode assumir que o arquivo já está incluído**
 
 E agora... vamos atualizar um filme!
 
