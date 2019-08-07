@@ -1,5 +1,3 @@
-<?php
-
 $pasePorView = false;
 $id = null;
 
