@@ -1,5 +1,4 @@
 $pasePorView = false;
-
 $id = null;
 
 function view($route, $vac = []) {
@@ -10,40 +9,54 @@ function view($route, $vac = []) {
   
   if ($route == "bonsFilmes") {
     if (count($vac) !== 1) {
-      throw new Exception('Você deve passar uma variável (e somente uma) para a view');
+      throw new Exception('Seu código deve passar uma variável (e somente uma) para a view');
     }
     
     $consulta = array_shift($vac);
     
     if ($consulta instanceof Consulta == false) {
       
-      throw new Exception("Você está utilizando uma consulta do Eloquent?");
+      throw new Exception("Verifique se você está usando uma consulta do Eloquent");
     }
     
     if ($consulta->table != "filmes") {
-      throw new Exception("Você está fazendo uma consulta a tabela de filmes?");
+      throw new Exception("Verifique se você está fazendo uma consulta a tabela filmes");
     }
     
     $wheres = $consulta->where;
     
     if (count($wheres) != 1) {
-      throw new Exception("Você deve usar o método where (e somente uma vez)");
+      throw new Exception("Você deve utilizar o método where (somente uma vez).");
     }
     
     if($wheres[0][0] != "rating") {
-      throw new Exception("Você deve fazer um filtro na coluna rating.");
+      throw new Exception("Você deve fazer um filtro utilizando a coluna rating");
     }
     
     if($wheres[0][1] != ">") {
-      throw new Exception("Você deve fazer um filtro comparando com o operador maior");
+      throw new Exception("Você deve fazer um filtro utilizando o operador maior (>)");
     }
     
     if($wheres[0][2] != "8") {
-      throw new Exception("Você deve fazer um filtro verificando ratings maiores que 8");
+      throw new Exception("Você deve fazer um filtro verificando os ratings maiores que 8");
+    }
+    
+    $orders = $consulta->order;
+    
+    if (count($orders) != 1) {
+      throw new Exception("Você deve usar o método orderBy (somente uma vez).");
+    }
+    
+    if($orders[0][0] != "title") {
+      throw new Exception("Você deve ordenar pela coluna title");
+    }
+    
+    if($orders[0][1] != "asc" && $orders[0][1] != "ASC") {
+      throw new Exception("Você deve ordenar de forma crescente (ASC)");
     }
     
     if (!$consulta->get) {
-      throw new Exception("Não se esqueção de finalisar chamando o método get!!!");
+      throw new Exception("Não esqueça de finalizar chamando o método get!!!");
     }
     
   } else {
@@ -155,31 +168,33 @@ class Filme extends Model {
 }
 
 class Consulta {
-	public $where = [];
-	public $order = [];
-	public $table;
-	public $get = false;
+  public $where = [];
+  public $order = [];
+  public $table;
+  public $get = false;
+  
+  public function __construct($table) {
+    $this->table = $table;
+  }
+  
+  public function where($col, $operador, $value = null) {
+    if ($value === null) {
+      $value = $operador;
+      $operador = "=";
+    }
+    
+    $where = [$col, $operador, $value];
+    $this->where[] = $where;
+    return $this;
+  }
 
-	public function __construct($table) {
-		$this->table = $table;
-	}
-
-	public function where($col, $operador, $value = null) {
-		if ($value === null) {
-			$value = $operador;
-			$operador = "=";
-		}
-
-		$where = [$col, $operador, $value];
-		$this->where[] = $where;
-	}
-
-	public function orderBy($col, $order = "ASC") {
-		$this->order[] = [$col, $order];
-	}
-
-	public function get() {
-		$this->get = true;
-		return $this;
-	}
+  public function orderBy($col, $order = "ASC") {
+    $this->order[] = [$col, $order];
+    return $this;
+  }
+  
+  public function get() {
+    $this->get = true;
+    return $this;
+  }
 }
