@@ -2,7 +2,7 @@ Para este exercício faremos genro.php, o arquivo do **model** que  consistente 
 
 Seu trabalho neste caso é o seguinte:
 
-> 1. Declare um model que na tabela do banco de dados é chame de **generos**
+> 1. Declare um model que se refira a tabela **generos** do banco de dados
 
 > 2. Declare que os registros de data e hora no banco de dados não sejam definidos.
 
