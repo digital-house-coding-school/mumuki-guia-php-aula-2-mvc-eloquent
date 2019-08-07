@@ -16,7 +16,7 @@ public function testUpdate(): void {
 		
 		$pasePorRedirect = false;
 		
-		$pc = new PeliculasController();
+		$pc = new FilmesController();
 		
 		$request->title = "O Rei Leão";
 		$request->rating = 9.2;
@@ -24,7 +24,7 @@ public function testUpdate(): void {
 		$request->secret = 1;
 		
 		try {
-		  $resul = $pc->actualizar($request, 1);
+		  $resul = $pc->update($request, 1);
 		} catch(Exception $e) {
 		  $this->assertTrue(false, $e->getMessage());
 		}
@@ -35,7 +35,7 @@ public function testUpdate(): void {
 		$request->secret = 2;
 		
 		try {
-		  $resul = $pc->actualizar($request, 2);
+		  $resul = $pc->update($request, 2);
 		} catch(Exception $e) {
 		  $this->assertTrue(false, $e->getMessage());
 		}
