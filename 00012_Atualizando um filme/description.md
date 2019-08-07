@@ -5,12 +5,12 @@ E agora... vamos atualizar um filme!
 Para isso, você deve criar uma função chamada `update` que receberá o seguinte formulário pelo POST para atualizar um filme que **já estava no banco de dados**:
 
 ``` html
-<form action = "/filmes/update" method = "POST">
+<form action = "/filmes/update" method="POST">
   {{csrf_field}}
   <input type = "text" name = "title">
   <input type = "text" name = "rating">
   <input type = "text" name = "awards">
-</ form>
+</form>
 ```
 
 Esta função de armazenamento deve:
@@ -23,4 +23,4 @@ Esta função de armazenamento deve:
 
 > 4. Chame o método save
 
-> 5. Redirecione o usuário para a URL **/filmes/listar ** através da função `redirect`
+> 5. Redirecione o usuário para a URL **/filmes/listar** através da função `redirect`
