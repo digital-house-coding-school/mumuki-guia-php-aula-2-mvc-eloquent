@@ -113,7 +113,7 @@ class Filme extends Model {
   }
   
   public static function find($id) {
-    $peliculas = Pelicula::all();
+    $peliculas = Filme::all();
     return $peliculas[$id - 1];
   }
 }
