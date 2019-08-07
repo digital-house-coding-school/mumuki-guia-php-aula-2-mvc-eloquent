@@ -1,8 +1,8 @@
-public function testFistarFilmes(): void {
+public function testListarFilmes(): void {
   global $pasePorView;
   
   $pasePorView = false;
-  
+
   $pc = new FilmesController();
   
   try {
