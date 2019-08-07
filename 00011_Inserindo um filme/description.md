@@ -19,7 +19,7 @@ Esta função de armazenamento deve:
 
 > 2. Criar um novo objeto do tipo `Filme`
 
-> 3. Atribir os atributos ao objeto `Filme` baseado nos dados da `Request`. Felizmente, o banco de dados tem os mesmos nomes de coluna que os campos `<input>` no formulário
+> 3. Passar os atributos ao objeto `Filme` baseado nos dados da `Request`. Felizmente, o banco de dados tem os mesmos nomes de coluna que os campos `<input>` no formulário
 
 > 4. Chame o método save
 
