@@ -1,4 +1,4 @@
-public function testFiltroEOrden(): void {
+public function testFiltroEOrdem(): void {
 		global $pasePorView;
 		
 		$pasePorView = false;
