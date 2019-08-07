@@ -5,11 +5,11 @@ E chegamos ao final da aula, onde finalmente iremos deletar um filme.
 Para isso, você deve criar uma função chamada `delete` que receberá o seguinte formulário por DELETE para saber o **id** de qual filme deletar:
 
 ``` html
-<form action = "/ movies / remove" method = "POST">
+<form action = "/movies/remove" method = "POST">
    {{csrf_field}}
    <input type="hidden" name="id" valor="{{$filme->id}}"
    <input type="hidden" name="_method" value="DELETE">
-</ form>
+</form>
 ```
 
 Esta função `delete` deve:
