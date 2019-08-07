@@ -68,7 +68,7 @@ function view($route, $vac = []) {
     $orders = $consulta->order;
     
     if (count($orders) != 1) {
-      throw new Exception("Você deve usar o método orderBy (somente uma vez.)");
+      throw new Exception("Você deve usar o método orderBy (somente uma vez).");
     }
     
     if($orders[0][0] != "title") {
