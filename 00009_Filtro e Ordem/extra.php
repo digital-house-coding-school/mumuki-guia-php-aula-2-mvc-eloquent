@@ -9,9 +9,7 @@ function view($route, $vac = []) {
   $pasePorView = true;
   
   if ($route == "bonsFilmes") {
-    if (count($vac) !== 1) {
-      throw new Exception('Você deve passar uma variável (e somente uma) para a view');
-    }
+    
     
     $consulta = array_shift($vac);
     
